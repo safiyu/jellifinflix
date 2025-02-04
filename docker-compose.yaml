@@ -1,0 +1,12 @@
+services:
+  jellyfix:
+    container_name: jellyfix
+    image: safiyu/jellyfinfix:latest
+    volumes:
+      - /share/Media:/media:rw
+    environment:
+      - CRON_STRING="* * * * *"
+      - TZ=Europe/Paris
+    restart: always
+    healthcheck:
+      disable: false
