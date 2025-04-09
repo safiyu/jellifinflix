@@ -37,4 +37,4 @@ find . -type d -exec bash -c '
 		fi
         done' bash {} +
 
-curl -s -S -d "" -w "jellyfin library refresh completed with http_code:%{http_code}\\n" -H "Accept: application/json" -H "X-MediaBrowser-Token: $JF_API_KEY" "$JF_URL/emby/Library/Refresh"
+curl -s -S -d "" -w "jellyfin library refresh completed with http_code:%{http_code}\\n" -H "Accept: application/json" "$JF_URL/library/refresh?api_key=$JF_API_KEY"
