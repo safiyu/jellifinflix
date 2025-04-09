@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 # check=skip=SecretsUsedInArgOrEnv
 
-FROM alpine:3.14
+FROM alpine:3.21
 LABEL maintainer="Safiyu <safiyucloud@gmail.com>"
 VOLUME /media
 RUN apk add --no-cache bash figlet curl
