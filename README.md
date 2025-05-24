@@ -1,4 +1,4 @@
-# jellifinflix
+# Jellyfinfix
 This docker creates .ignore files in empty folders so that empty folders are ignored in the library.
 A cron job runs every 6 hours by default which can be customized using CRON_STRING env variable. Also you can pass jellyfin api key and jellyfin server url as environment variables to run jellyfin library refresh after every replace.
 
