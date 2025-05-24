@@ -1,6 +1,6 @@
 # Jellyfinfix
 
-This docker creates .ignore files in folders without videos that are maintained by movie or shows collection managers such as Radarr or Sonarr so that empty folders are ignored in the library.
+This docker creates .ignore files in folders without videos that are maintained by media managers so that non-video/empty folders are ignored in the library.
 A cron job runs every 6 hours by default which can be customized using CRON_STRING env variable. Also you can pass jellyfin api key and jellyfin server url as environment variables to run jellyfin library refresh after every replace.
 
 # Install 👩‍💻
