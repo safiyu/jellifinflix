@@ -6,7 +6,7 @@ find . -type d -exec bash -c '
         }
         for dir do
             full_path=$(join_paths "$dir" ".ignore")
-            if find "$dir" -maxdepth 1 -type f \( -name "*.mkv" -o -name "*.mp4" -o -name "*.avi" -o -name "*.mpg" -o -name "*.mov" -o -name "*.wmv" \) | read; then
+            if find "$dir" -maxdepth 1 -type f \( -name "*.mkv" -o -name "*.mp4"  -name "*.avi" -o -name "*.mpg"  -name "*.mpeg" -o -name "*.mov" -name "*.wmv" -o -name "*.ts"  \) | read; then
                 echo "$dir - Video file exists. skipping folder"
                 if [ -f "$full_path" ]; then
                     rm "$full_path"
@@ -28,7 +28,7 @@ find . -type d -exec bash -c '
                     fi
                 fi 
             fi
-            FILES_FOUND=$(find "$dir" -type f \( -name "*.mkv" -o -name "*.mp4" -o -name "*.avi" -o -name "*.mpg" -o -name "*.mov" -o -name "*.wmv"\) -print)
+            FILES_FOUND=$(find "$dir" -type f \( -name "*.mkv" -o -name "*.mp4"  -name "*.avi" -o -name "*.mpg"  -name "*.mpeg" -o -name "*.mov" -name "*.wmv" -o -name "*.ts"  \) -print)
 	    	if [ -z "$FILES_FOUND" ]; then
 		  # Create an empty text file
 		  touch "$full_path"
